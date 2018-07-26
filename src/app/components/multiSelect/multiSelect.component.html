@@ -1,0 +1,15 @@
+<div class="multiSelect">
+        <button class="multiSelectButton" (click)="open()">
+                {{selectedItem ? selectedItem.name : 'Выберите данные'}}
+        </button>
+        <div class="multiSelectPanel" *ngIf="isOpen">
+                <ng-template [ngIf]="isGrouping" [ngIfElse]="singleSelect">
+                        <div *ngFor="let item of items">
+                                <multi-select-item  (onSelect)="selectItem($event)" [selectedItem]="selectedItem" *ngIf="item.childs.length > 0"  [item]="item"></multi-select-item>
+                        </div>
+                </ng-template>
+                <ng-template #singleSelect>
+                        <single-select-item  (onSelect)="selectItem($event)" [selectedItem]="selectedItem" *ngFor="let item of items" [item]="item"> </single-select-item>
+                </ng-template>                   
+        </div>
+</div>

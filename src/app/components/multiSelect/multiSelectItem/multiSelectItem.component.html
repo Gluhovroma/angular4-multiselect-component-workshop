@@ -1,0 +1,19 @@
+<div class="multiSelectGroup">
+        <div class="multiSelectGroupName" (click)="open()">
+                <div class="icon-19 expander" [ngClass]="{'icon-19' : !isOpen, 'icon-20' : isOpen}" role="presentation"></div>
+                <div>
+                        {{item.name}}
+                </div>
+        </div>        
+
+        <div *ngIf="isOpen">
+                <div  class="multiSelectGroupItem"
+                         *ngFor="let child of item.childs"
+                          [ngClass]="{'selectedItem': selectedItem && (child.id === selectedItem.id)}" 
+                          (click)="selectItem(child)">
+                {{child.name}}
+         </div>
+                        
+        </div>
+      
+</div>

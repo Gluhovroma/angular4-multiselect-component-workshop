@@ -1,0 +1,32 @@
+.multiSelectGroup {
+ 
+    
+}
+.multiSelectGroupName {
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    font: 300 14px 'Roboto Regular';
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.multiSelectGroupItem {
+    cursor: pointer;
+    padding: 0px 0px 0px 25px;
+
+    font: 300 14px 'Roboto Regular';
+    line-height: 23px;
+}
+.multiSelectGroupItem:hover {
+
+    background-color: #f5f8fd;
+    color: #11a8d3;
+}
+.selectedItem {
+    background-color: #f5f8fd;
+    color: #11a8d3;
+}
+.expander {
+    color: #11a8d3;
+    margin-right: 6px;
+}
